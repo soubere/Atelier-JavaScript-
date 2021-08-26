@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    var a = 100;
+    var b = 10;
+
+    function haut(){
+          if (a<300) {
+            a+=20;
+            var t1 = document.getElementById('carre');
+            t1.style.height = a+"px";
+          }
+          else {
+            var t1 = document.getElementById('carre');
+            t1.style.height = "100px";
+          }
+    }
+    function color_vert() {
+        var t1 = document.getElementById('carre');
+        t1.style.backgroundColor = "#0f0";
+    }
+    function col_init() {
+        var t1 = document.getElementById('carre');
+        t1.style.backgroundColor = "#f0f";
+    }
+    function disp() {
+        var t1 = document.getElementById('carre');
+        t1.style.visibility = "hidden";
+    }
+    function reap() {
+        var t1 = document.getElementById('carre');
+        t1.style.visibility = "visible";
+    }
+
+    </script>
+    <style media="screen">
+    #carre {
+          width:100px;
+          height:100px;
+          background:#f0f;
+          margin:30px auto;
+          }
+    </style>
+  </head>
+  <body>
+    <div>
+      <center>
+        <div id="carre">
+        </div>
+        <button type="button"  onclick="haut()">Hauteur</button>
+        <button type="button"  onclick="color_vert()">Couleur vert</button>
+        <button type="button"  onclick="col_init()">Couleur Initial</button>
+        <button type="button" onclick="disp()">Disparaitre</button>
+        <button type="button" onclick="reap()">Réaparaitre</button>
+      </center>
+    </div>
+  </body>
+
+</html>
